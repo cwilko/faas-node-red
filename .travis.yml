@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+install:
+  - docker build -t cwilko/faas-node-red:dev .
+
+script:
+  - docker run -d -rm cwilko/faas-node-red:dev
