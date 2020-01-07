@@ -2,7 +2,9 @@
 
 FROM nodered/node-red:latest-minimal
 
-RUN mkdir -p /home/app
+#USER root
+
+#RUN mkdir -p /home/app
 
 #COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 #RUN chmod +x /usr/bin/fwatchdog
@@ -11,9 +13,9 @@ RUN mkdir -p /home/app
 #RUN addgroup -S app && adduser app -S -G app
 #RUN chown app /home/app
 
-WORKDIR /home/app
+#WORKDIR /home/app
 
-#USER app
+
 
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
 ENV fprocess="cat"
