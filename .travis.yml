@@ -11,4 +11,5 @@ install:
   - docker build -t cwilko/faas-node-red:dev .
 
 script:
+  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
   - docker run -d --rm cwilko/faas-node-red:dev
