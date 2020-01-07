@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: node-red
+  gateway: http://127.0.0.1:1880
+functions:
+  faas-node-red:
+    lang: dockerfile
+    image: cwilko/faas-node-red:dev
+
