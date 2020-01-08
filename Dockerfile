@@ -15,7 +15,7 @@ FROM nodered/node-red:latest-minimal
 
 #WORKDIR /home/app
 
-
+COPY flows/* /data/
 
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
 ENV fprocess="cat"
