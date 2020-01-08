@@ -1,6 +1,6 @@
 # FROM openfaas/classic-watchdog:0.18.1 as watchdog
 
-FROM nodered/node-red:latest-minimal
+FROM nodered/node-red:1.0.3-10-arm32v7
 
 #USER root
 
