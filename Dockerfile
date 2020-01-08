@@ -1,6 +1,7 @@
 # FROM openfaas/classic-watchdog:0.18.1 as watchdog
 
 FROM nodered/node-red:1.0.3-10-arm32v7
+COPY qemu-arm-static /usr/bins
 
 #USER root
 
