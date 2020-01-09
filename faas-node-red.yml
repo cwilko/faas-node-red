@@ -5,5 +5,5 @@ provider:
 functions:
   faas-node-red:
     lang: dockerfile
-    image: cwilko/faas-node-red:dev
+    image: cwilko/faas-node-red:latest
 

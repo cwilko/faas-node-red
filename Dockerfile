@@ -1,7 +1,7 @@
 # FROM openfaas/classic-watchdog:0.18.1 as watchdog
 
 FROM nodered/node-red:1.0.3-10-arm32v7
-COPY qemu-arm-static /usr/bins
+COPY qemu-arm-static /usr/bin
 
 #USER root
 
@@ -15,8 +15,6 @@ COPY qemu-arm-static /usr/bins
 #RUN chown app /home/app
 
 #WORKDIR /home/app
-
-COPY flows/* /data/
 
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
 ENV fprocess="cat"
