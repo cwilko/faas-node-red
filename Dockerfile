@@ -1,7 +1,10 @@
 # FROM openfaas/classic-watchdog:0.18.1 as watchdog
 
-FROM nodered/node-red:1.0.3-10-arm32v7
-COPY qemu-arm-static /usr/bin
+FROM nodered/node-red:1.3.5-12-minimal-arm64v8 as target-arm64
+
+FROM nodered/node-red:1.3.5-12-minimal-arm32v7 as target-armv7
+
+FROM target-$TARGETARCH$TARGETVARIANT
 
 #USER root
 
