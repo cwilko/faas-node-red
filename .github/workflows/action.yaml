@@ -29,5 +29,5 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/arm/v7, linux/arm64
+          platforms: linux/arm64
           tags: wilkobets/faas-node-red:latest
