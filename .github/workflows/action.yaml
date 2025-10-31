@@ -1,6 +1,8 @@
 name: Build and Push
 
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 
 jobs:
   docker:
@@ -28,4 +30,4 @@ jobs:
           context: .
           push: true
           platforms: linux/arm/v7, linux/arm64
-          tags: ${{ github.repository }}:latest
+          tags: wilkobets/faas-node-red:latest
